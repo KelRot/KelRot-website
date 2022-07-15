@@ -25,7 +25,7 @@ class Footer extends Component {
         </ul>
 
         <ul className='footnav'>
-          <a href='/us'>Hakkımızda</a>
+          <a href='/about'>Hakkımızda</a>
           <a href='/kelrot.com'>Medya</a>
           <a href='/kelrot.com'>Sponsorlar</a>
           <a href='/kelrot.com'>FRC</a>
