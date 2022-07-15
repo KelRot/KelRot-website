@@ -1,0 +1,270 @@
+*{
+    margin: auto;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-weight: 350;
+}
+
+body{
+    background-image: linear-gradient(#262626, #404040);
+}
+
+/*---------------------------Intro-----------------------------------*/
+
+.intro{
+    text-align: center;
+}
+
+.intro img{
+    padding: 20px 20px 10px 20px;
+}
+
+#logo1{
+    height: 100px;
+}
+
+#logo2{
+    height: 90px;
+}
+
+.intro li{
+    font-weight: 500;
+    font-size: 27px;
+    color: #c93434;
+    padding: 0px 0px 10px 0px;
+}
+
+/*-------------------------------------------------------------------*/
+
+/*---------------------------Navbar----------------------------------*/
+
+.navbar{
+    width: 1080px;
+    height: 80px;
+    background-color: #404040;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.navbar ul{
+    padding: 28px;
+}
+
+.navbar a{
+    padding: 23px 27px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.navbar a:hover{
+    color: #c93434;
+}
+
+/*-------------------------------------------------------------------*/
+
+/*----------------------------Slider---------------------------------*/
+
+.slider{
+    width: 1080px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slider figure{
+    display: flex;
+    margin: 0;
+    left: 0;
+    width: 500%;
+    height: 500px;
+    animation: 20s slider infinite;
+}
+
+.slider figure div{
+    position: relative;
+    width: 20%;
+}
+
+.slider figure div img{
+    object-fit: cover;
+    height: 500px;
+    width: 1080px;
+    float: left;
+}
+
+.slider figure div h1{
+    position: absolute;
+    color: #d9d9d9;
+    font-size: 40px;
+    font-weight: 600;
+    background-color: rgba(33, 33, 33, 0.6);
+    width: 1060px;
+    height: 62px;
+    margin-top: 420px;
+    padding-left: 20px;
+    padding-top: 18px;
+}
+
+@keyframes slider{
+	0%{
+        transform: translateX(0);
+    }
+    15%{
+    	transform: translateX(0);
+    }
+    20%{
+        transform: translateX(-20%);
+    }
+    35%{
+        transform: translateX(-20%);
+    }
+    40%{
+        transform: translateX(-40%);
+    }
+    55%{
+        transform: translateX(-40%);
+    }
+    60%{
+        transform: translateX(-60%);
+    }
+    75%{
+        transform: translateX(-60%);
+    }
+    80%{
+        transform: translateX(-80%);
+    }
+    95%{
+    	transform: translateX(-80%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/*-------------------------------------------------------------------*/
+
+/*----------------------------Info-----------------------------------*/
+
+.info{
+    width: 1080px;
+}
+
+.info h1{
+    font-weight: 600;
+    font-size: 35px;
+    color: #ffffff;
+    padding: 35px 35px 20px 35px;
+}
+
+.info p{
+    color: #d9d9d9;
+    padding: 0px 35px;
+    font-size: 19px;
+}
+
+#block{
+    width: 400px;
+    float: left;
+}
+
+.info h1 a{
+    color: #c93434;
+    font-size: 14px;
+    border: 1px solid #c93434;
+    border-radius: 4px;
+    padding: 1px 25px;
+    margin-left: 18px;
+}
+
+.form{
+    background-color: rgba(33, 33, 33, 0.8);
+    width: 450px;
+    height: 300px;
+    float: left;
+    margin: 20px;
+}
+
+#form2{
+    height: 250px;
+    width: 1040px;
+}
+
+.us{
+    background-color: #262626;
+    height: 270px;
+    width: 540px;
+    float: left;
+}
+
+.blog{
+    height: 270px;
+    width: 540px;
+    background-color: #404040;
+    margin-right: 0;
+}
+
+.school{
+    height: 450px;
+    background: url(images/kabatas.jpg) no-repeat;
+    background-size: 1080px 450px;
+}
+
+.first{
+    height: 350px;
+    background: url(images/first.jpg) no-repeat;
+    background-size: 1080px 350px;
+}
+
+.teknofest{
+    height: 350px;
+    background: url(images/teknofest.jpeg) no-repeat;
+    background-size: 1080px 550px;
+}
+
+/*-------------------------------------------------------------------*/
+
+/*-----------------------------Footer--------------------------------*/
+
+.footer{
+    width: 1080px;
+    background-color: #262626;
+    height: 230px;
+    border-radius: 0px  0px 20px 20px;
+    margin-bottom: 20px;
+}
+
+.footer ul{
+    padding: 25px 35px 8px 35px;
+    display: inline-block;
+    width: 18em;
+}
+
+.sponsor{
+    text-align: center;
+}
+
+.address{
+    text-align: right;
+
+}
+
+.footer ul li{
+    color: #d9d9d9;
+}
+
+#info, #sponsor, #address{
+    font-weight: 600;
+    font-size: 35px;
+    padding: 10px 0px;
+    color: #ffffff;
+}
+
+.footnav{
+    padding: 10px;
+}
+
+.footnav a{
+    color: #ffffff;
+    padding: 37px;
+}
+
+/*-------------------------------------------------------------------*/
