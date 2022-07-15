@@ -25,13 +25,13 @@ class Footer extends Component {
         </ul>
 
         <ul className='footnav'>
-          <a href='kelrot.com'>Hakkımızda</a>
-          <a href='kelrot.com'>Medya</a>
-          <a href='kelrot.com'>Sponsorlar</a>
-          <a href='kelrot.com'>FRC</a>
-          <a href='kelrot.com'>TEKNOFEST</a>
-          <a href='kelrot.com'>Dokümantasyon</a>
-          <a href='kelrot.com'>Blog</a>
+          <a href='/us'>Hakkımızda</a>
+          <a href='/kelrot.com'>Medya</a>
+          <a href='/kelrot.com'>Sponsorlar</a>
+          <a href='/kelrot.com'>FRC</a>
+          <a href='/kelrot.com'>TEKNOFEST</a>
+          <a href='/kelrot.com'>Dokümantasyon</a>
+          <a href='/kelrot.com'>Blog</a>
         </ul>
       </div>
     )
