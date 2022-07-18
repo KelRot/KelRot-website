@@ -5,14 +5,14 @@ class Navbar extends Component {
     return (
       <div className='navbar'>
         <ul>
-            <a href='kelrot.com'>Ana Sayfa</a>
-            <a href='kelrot.com'>Hakkımızda</a>
-            <a href='kelrot.com'>Medya</a>
-            <a href='kelrot.com'>Sponsorlar</a>
-            <a href='kelrot.com'>FRC</a>
-            <a href='kelrot.com'>TEKNOFEST</a>
-            <a href='kelrot.com'>Dokümantasyon</a>
-            <a href='kelrot.com'>Blog</a>
+            <a href='/'>Ana Sayfa</a>
+            <a href='/about'>Hakkımızda</a>
+            <a href='/media'>Medya</a>
+            <a href='/sponsors'>Sponsorlar</a>
+            <a href='/frc'>FRC</a>
+            <a href='/teknofest'>TEKNOFEST</a>
+            <a href='docs'>Dokümantasyon</a>
+            <a href='/blog'>Blog</a>
         </ul>
       </div>
     )
