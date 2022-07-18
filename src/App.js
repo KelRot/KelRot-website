@@ -10,6 +10,7 @@ import Sponsors from './components/Sponsors';
 import Docs from './components/Docs';
 import Blog from './components/Blog';
 import FRC from './components/FRC';
+import Teknofest from './components/Teknofest'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -40,6 +41,9 @@ function App() {
             } />
             <Route exact path='/FRC' exact element={
               <FRC />
+            } />
+            <Route exact path='/teknofest' exact element={
+              <Teknofest />
             } />
             <Route exact path='/docs' exact element={
               <Docs />
