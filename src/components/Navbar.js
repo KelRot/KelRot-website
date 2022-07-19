@@ -11,7 +11,7 @@ class Navbar extends Component {
             <a href='/sponsors'>Sponsorlar</a>
             <a href='/frc'>FRC</a>
             <a href='/teknofest'>TEKNOFEST</a>
-            <a href='docs'>Dokümantasyon</a>
+            <a href='/docs'>Dokümantasyon</a>
             <a href='/blog'>Blog</a>
         </ul>
       </div>
