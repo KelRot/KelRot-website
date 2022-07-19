@@ -39,7 +39,7 @@ function App() {
             <Route exact path='/sponsors' exact element={
               <Sponsors />
             } />
-            <Route exact path='/FRC' exact element={
+            <Route exact path='/frc' exact element={
               <FRC />
             } />
             <Route exact path='/teknofest' exact element={
