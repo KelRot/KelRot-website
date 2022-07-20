@@ -72,7 +72,7 @@ class Sponsors extends Component {
           <div style={{width: '500px', float: 'left'}}><img src={require('../images/' + images[i])} style={imgStyle}></img></div>
           <div style={pStyle}>
             <h1 style={{textAlign: 'right'}}>{titles[i]}</h1>
-            <p style={{marginTop: '10px'}}>{contents[i]}</p>
+            <p style={{marginTop: '10px', textAlign: 'right'}}>{contents[i]}</p>
           </div>
         </div>); 
       }
