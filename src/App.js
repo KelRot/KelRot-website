@@ -24,7 +24,7 @@ function App() {
         marginTop: '0'
       }} class='Main'>
         <Routes>
-            <Route exact path='/KelRot-website' exact element={
+            <Route exact path='/KelRot-website/' exact element={
               <div>
                 <Slider />
                 <Info />
