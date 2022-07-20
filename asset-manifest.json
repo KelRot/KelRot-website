@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/KelRot-website/static/css/main.258d5bf8.css",
-    "main.js": "/KelRot-website/static/js/main.cd5bef58.js",
+    "main.js": "/KelRot-website/static/js/main.ab1d2751.js",
     "static/js/787.b5bd7af0.chunk.js": "/KelRot-website/static/js/787.b5bd7af0.chunk.js",
     "static/media/slider3.JPG": "/KelRot-website/static/media/slider3.b246599f3afc77fd070c.JPG",
     "static/media/slider1.JPG": "/KelRot-website/static/media/slider1.1f57bb6ab1c019a94d8f.JPG",
@@ -24,11 +24,11 @@
     "static/media/logo2.png": "/KelRot-website/static/media/logo2.9ccb9e13b3885c02ec2e.png",
     "index.html": "/KelRot-website/index.html",
     "main.258d5bf8.css.map": "/KelRot-website/static/css/main.258d5bf8.css.map",
-    "main.cd5bef58.js.map": "/KelRot-website/static/js/main.cd5bef58.js.map",
+    "main.ab1d2751.js.map": "/KelRot-website/static/js/main.ab1d2751.js.map",
     "787.b5bd7af0.chunk.js.map": "/KelRot-website/static/js/787.b5bd7af0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.258d5bf8.css",
-    "static/js/main.cd5bef58.js"
+    "static/js/main.ab1d2751.js"
   ]
 }
