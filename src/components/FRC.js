@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 const boxStyle = {
-  width: '950px',
+  width: '1000px',
   height: '300px',
   backgroundColor: '#323232',
   marginBottom: '80px',
@@ -10,22 +10,29 @@ const boxStyle = {
   borderRadius: '20px'
 };
 
-const imgStyle = {
-  height: '200px',
-  float: 'right',
-  marginTop: '50px'
+let imgStyle = {
+  maxWidth: '500px',
+  float: 'left',
 }
 
 const pStyle = {
-  width: '460px',
+  width: '440px',
   color: 'white',
   overflow: 'hidden',
-  margin: '30px 0 0 50px',
+  margin: '30px 0 0 30px',
   float: 'left',
   fontSize: '18px'
 }
 
-const titles = ['FIRST Hakkında', 'Rapid React (2022)', 'Infinite Recharge (2020)', 'Destination: Deep Space (2019)', 'FIRST Power Up (2018)', 'FIRST Stronghold (2016)']
+
+const titles = [
+  'FIRST Hakkında', 
+  'Rapid React (2022)', 
+  'Infinite Recharge (2020)',
+  'Destination: Deep Space (2019)', 
+  'FIRST Power Up (2018)', 
+  'FIRST Stronghold (2016)'
+];
 
 const contents = ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',

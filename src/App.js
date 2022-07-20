@@ -10,7 +10,7 @@ import Sponsors from './components/Sponsors';
 import Docs from './components/Docs';
 import Blog from './components/Blog';
 import FRC from './components/FRC';
-import Teknofest from './components/Teknofest'
+import Teknofest from './components/Teknofest';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
