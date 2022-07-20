@@ -17,7 +17,7 @@ let imgStyle = {
 
 const pStyle = {
   width: '440px',
-  color: 'white',
+  color: '#ffffff',
   overflow: 'hidden',
   margin: '30px 0 0 30px',
   float: 'left',
@@ -62,8 +62,8 @@ class Sponsors extends Component {
       if(i%2==0){
         this.divs.push(<div style={boxStyle} key={i}>
           <div style={pStyle}>
-            <h1 style={{textAlign: 'left'}}>{titles[i]}</h1>
-            <p style={{marginTop: '10px'}}>{contents[i]}</p>
+            <h1 style={{textAlign: 'left', fontWeight: '600'}}>{titles[i]}</h1>
+            <p style={{marginTop: '10px', color: '#d9d9d9'}}>{contents[i]}</p>
           </div>
           <div style={{width: '500px', float: 'right'}}><img src={require('../images/' + images[i])} style={imgStyle}></img></div>
         </div>);
@@ -71,8 +71,8 @@ class Sponsors extends Component {
         this.divs.push(<div style={boxStyle} key={i}>
           <div style={{width: '500px', float: 'left'}}><img src={require('../images/' + images[i])} style={imgStyle}></img></div>
           <div style={pStyle}>
-            <h1 style={{textAlign: 'right'}}>{titles[i]}</h1>
-            <p style={{marginTop: '10px', textAlign: 'right'}}>{contents[i]}</p>
+            <h1 style={{textAlign: 'right', fontWeight: '600'}}>{titles[i]}</h1>
+            <p style={{marginTop: '10px', textAlign: 'right', color:'#d9d9d9'}}>{contents[i]}</p>
           </div>
         </div>); 
       }
