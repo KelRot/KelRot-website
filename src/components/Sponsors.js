@@ -53,6 +53,16 @@ const images = [
   'garage.png'
 ];
 
+const links = [
+  'https://iskader.org.tr/',
+  'https://www.kelev.org.tr/',
+  'https://www.besiktas.bel.tr/',
+  'https://voltmotor.com.tr/',
+  'https://www.restyazilim.com/',
+  'https://www.ininal.com/',
+  'https://www.arcelikglobal.com/tr/teknoloji/ar-ge/arcelik-garage/'
+];
+
 
 class Sponsors extends Component {
   constructor(){
@@ -64,6 +74,7 @@ class Sponsors extends Component {
           <div style={pStyle}>
             <h1 style={{textAlign: 'left', fontWeight: '600'}}>{titles[i]}</h1>
             <p style={{marginTop: '10px', color: '#d9d9d9'}}>{contents[i]}</p>
+            <a href={links[i]} class='gotowebsite' style={{float: 'left'}}>Siteye git</a>
           </div>
           <div style={{width: '500px', float: 'right'}}><img src={require('../images/' + images[i])} style={imgStyle}></img></div>
         </div>);
@@ -73,6 +84,7 @@ class Sponsors extends Component {
           <div style={pStyle}>
             <h1 style={{textAlign: 'right', fontWeight: '600'}}>{titles[i]}</h1>
             <p style={{marginTop: '10px', textAlign: 'right', color:'#d9d9d9'}}>{contents[i]}</p>
+            <a href={links[i]} class='gotowebsite' style={{float: 'right'}}>Siteye git</a>
           </div>
         </div>); 
       }
