@@ -19,12 +19,12 @@ const miniBoxStyle = {
   float: 'left',
   fontSize: '18px',
   textAlign: 'center',
-  backgroundColor: '#3b3b3b',
+  backgroundColor: '#404040',
   padding: '15px 0'
 }
 
 const linkStyle = {
-  color: '#ffffff'
+  color: '#d9d9d9'
 };
 
 const titles = [
