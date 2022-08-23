@@ -9,8 +9,10 @@ import Media from './components/Media';
 import Sponsors from './components/Sponsors';
 import Docs from './components/Docs';
 import Blog from './components/Blog';
+import WriteBlog from './components/WriteBlog';
 import FRC from './components/FRC';
 import Teknofest from './components/Teknofest';
+import Members from './components/Members';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
         marginTop: '0'
       }} class='Main'>
         <Routes>
-            <Route exact path='/KelRot-website/' exact element={
+            <Route exact path='/' exact element={
               <div>
                 <Slider />
                 <Info />
@@ -35,6 +37,9 @@ function App() {
             } />
             <Route exact path='/media' exact element={
               <Media />
+            } />
+            <Route exact path='/members' exact element={
+              <Members />
             } />
             <Route exact path='/sponsors' exact element={
               <Sponsors />
@@ -48,8 +53,11 @@ function App() {
             <Route exact path='/docs' exact element={
               <Docs />
             } />
-            <Route exact path='/blog' exact element={
+            <Route path='/blog/:blogname' element={
               <Blog />
+            } />
+            <Route exact path='/writeblog' exact element={
+              <WriteBlog />
             } />
         </Routes>
       </div>

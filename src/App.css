@@ -4,6 +4,7 @@
     list-style: none;
     text-decoration: none;
     font-weight: 350;
+    color: #ffffff;
 }
 
 body{
@@ -236,4 +237,61 @@ body{
     border-radius: 4px;
     padding: 6px 30px;
     margin-top: 20px;
+}
+
+
+/*-------Blog writing page inputbox--------*/
+
+.writeBlog{
+    color: #fff;
+    width: auto;
+    font-size: 20px;
+    display: inline;
+    border: none;
+    background-color: rgb(50, 50, 50);;
+    margin-top: 40px;
+    margin-left: 40px;
+    caret-color: #fff;
+    padding: 10px;
+}
+
+.writeBlog:focus{
+    outline: none;
+}
+
+.writeBlogInput{
+    color: #fff;
+    width: auto;
+    font-size: 20px;
+    display: inline;
+    border: none;
+    background-color: rgb(50, 50, 50);;
+    margin-top: 40px;
+    margin-left: 40px;
+    caret-color: #fff;
+    padding: 10px;
+}
+
+.writeBlogInput:focus{
+    outline: none;
+}
+
+.writeBlogButton{
+    color: #fff;
+    width: auto;
+    font-size: 20px;
+    display: inline;
+    border: none;
+    background-color: rgb(50, 50, 50);;
+    margin-top: 40px;
+    margin-left: 40px;
+    caret-color: #fff;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.writeBlogButton:hover{
+    background-color: #444;
+    cursor: pointer;
+    color: #999;
 }
