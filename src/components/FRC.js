@@ -5,8 +5,7 @@ const boxStyle = {
   width: '1000px',
   height: '300px',
   backgroundColor: '#323232',
-  marginBottom: '80px',
-  marginTop: '40px',
+  margin: '40px',
   borderRadius: '20px'
 };
 
