@@ -4,19 +4,26 @@ import React, { Component } from 'react'
 let boxStyle = {
   width: '1000px',
   backgroundColor: '#323232',
-  marginBottom: '80px',
-  marginTop: '40px',
+  margin: '40px',
   borderRadius: '20px',
   overflow: 'hidden',
   color: '#d9d9d9'
 };
 
-const aStyle = {
+const h1Style = {
     color: '#d9d9d9',
     margin: '25px 0 0 20px',
     float: 'left',
     fontWeight: '600'
 };
+
+const aStyle = {
+  fontWeight: '400',
+  color: '#d9d9d9',
+  margin: '18px 0 0 25px',
+  float: 'left',
+  fontSize: '25px'
+}
 
 const personBoxStyle = {
     width: '150px',
@@ -138,7 +145,7 @@ class Members extends Component {
 
 
     this.divs.push(
-        <div style={{...boxStyle, ...{height: '100px'}}}>
+        <div style={{...boxStyle, ...{height: '70px'}}}>
             <h1><a href='/about' style={aStyle}>Takım</a></h1>
             <h1><a href='/members' style={aStyle}>Üyeler</a></h1>
         </div>
@@ -160,7 +167,7 @@ class Members extends Component {
 
     this.divs.push(
         <div style={{...boxStyle, ...{height: '830px'}}}>
-            <div style={{width: '1000px', height: '80px'}}><h1 style={aStyle}>Takım</h1></div>
+            <div style={{width: '1000px', height: '80px'}}><h1 style={h1Style}>Takım</h1></div>
             {this.personBoxes}
         </div>
     );
@@ -181,7 +188,7 @@ class Members extends Component {
 
     this.divs.push(
         <div style={{...boxStyle, ...{height: '300px'}}}>
-            <div style={{width: '1000px', height: '80px'}}><h1 style={aStyle}>Mentörler</h1></div>
+            <div style={{width: '1000px', height: '80px'}}><h1 style={h1Style}>Mentörler</h1></div>
             {this.personBoxes}
         </div>
     );
