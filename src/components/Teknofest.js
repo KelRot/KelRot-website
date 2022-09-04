@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import s from '../text/teknofest';
 
 const boxStyle = {
   width: '1000px',
@@ -23,23 +23,17 @@ const pStyle = {
   fontSize: '18px'
 };
 
-const titles = [
-  'TEKNOFEST',
-  'Efficiency Challenge',
-  '2021 Sezonu'
-];
+let contents = [], images = [], titles = [];
 
-const contents = [
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-];
-
-const images = ['teknofest-logo.png', 'efficiency.png', 'teknofest-logo.png'];
 
 class Teknofest extends Component {
   constructor(){
     super();
+    for(let i = 0; i < s.length; ++i){
+      contents.push(s[i].t);
+      titles.push(s[i].p);
+      images.push(s[i].im);
+    }
     this.divs = [];
     for(let i = 0; i < 3; ++i){
       this.divs.push(

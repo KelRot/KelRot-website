@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
+import s from '../text/mainpage';
 
 const url ={
-  kabatas: "https://kabataserkeklisesi.meb.k12.tr/",
-  first: "https://www.firstinspires.org/",
-  teknofest: "https://www.teknofest.org/"
+  kabatas: s.kabatas.l,
+  first: s.frc.l,
+  teknofest: s.teknofest.l
 }
 
 const information ={
-  us: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium vel quam ipsa ut eius. Facere, tempora similique quia, inventore possimus est non totam accusantium aliquam eum distinctio, reiciendis fuga ducimus.",
-  kabatas: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  first: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium vel quam ipsa ut eius. Facere, tempora similique quia, inventore possimus est non totam accusantium aliquam eum distinctio, reiciendis fuga ducimus.",
-  teknofest: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium vel quam ipsa ut eius. Facere, tempora similique quia, inventore possimus est non totam accusantium aliquam eum distinctio, reiciendis fuga ducimus."
+  us: s.bizkimiz.t,
+  kabatas: s.kabatas.t,
+  first: s.frc.t,
+  teknofest: s.teknofest.t
 }
 
 class Info extends Component {

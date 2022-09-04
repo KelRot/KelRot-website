@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-
+import s from '../text/seasons';
 
 const boxStyle = {
   width: '1000px',
-  height: '300px',
   backgroundColor: '#323232',
   margin: '40px',
-  borderRadius: '20px'
+  borderRadius: '20px',
+  overflow: 'auto'
 };
 
 let imgStyle = {
@@ -20,32 +20,22 @@ const pStyle = {
   overflow: 'hidden',
   margin: '30px 0 0 30px',
   float: 'left',
-  fontSize: '18px'
+  fontSize: '18px',
+  paddingBottom: '30px'
 }
 
+let titles = [], contents = [], images = [];
 
-const titles = [
-  'FIRST Hakkında', 
-  'Rapid React (2022)', 
-  'Infinite Recharge (2020)',
-  'Destination: Deep Space (2019)', 
-  'FIRST Power Up (2018)', 
-  'FIRST Stronghold (2016)'
-];
-
-const contents = ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.']
-
-const images = ['first.png', 'rapidreact.png', 'infinite.png', 'deepspace.png', 'powerup.png', 'stronghold.png'];
 
 
 class FRC extends Component {
   constructor(){
     super();
+    for(let i = 0; i < s.length; ++i){
+      contents.push(s[i].t);
+      titles.push(s[i].p);
+      images.push(s[i].im);
+    }
     this.divs = [];
     for(let i=0; i<6; ++i){
       this.divs.push(<div style={boxStyle} key={i}>

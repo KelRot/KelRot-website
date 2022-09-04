@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-
+import s from '../text/sponsors';
 
 const boxStyle = {
   width: '1000px',
-  height: '300px',
   backgroundColor: '#323232',
   margin: '40px',
-  borderRadius: '20px'
+  borderRadius: '20px',
+  overflow: 'auto'
 };
 
 let imgStyle;
@@ -42,23 +42,12 @@ const pStyle = {
   overflow: 'hidden',
   margin: '30px 0 0 30px',
   float: 'left',
-  fontSize: '18px'
-}
+  fontSize: '18px',
+  textAlign: 'justify'
+};
 
-const titles = [
-  'İSKADER',
-  'KELEV',
-  'Beşiktaş Belediyesi',
-  'İninal',
-  'Atıf Kocaarslan',
-  'Volt Elektrik Motorları',
-  'Çağlar Ailesi',
-  'Rest Yazılım',
-  'Arçelik Garage',
-  'Panfez'
-];
-
-/* Beşiktaş Belediyesi - Platin 
+/* 
+Beşiktaş Belediyesi - Platin 
 İskader - Platin 
 Kelev - Platin 
 İninal - Altın
@@ -67,49 +56,23 @@ Volt- Bronz
 Çağlar Ailesi - Bronz
 Rest - Bronz
 Panfez - Hizmet
-Arçelik - Hizmet*/
+Arçelik - Hizmet
+*/
 
-const contents = ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-];
-
-const images = [
-  'iskader.png', 
-  'kelev.png', 
-  'besiktas.png', 
-  'ininal.png',
-  'atif kocaarslan.png',
-  'volt.png', 
-  'caglar ailesi.png',
-  'rest.png', 
-  'garage.png',
-  'panfez.png'
-];
-
-const links = [
-  'https://iskader.org.tr/',
-  'https://www.kelev.org.tr/',
-  'https://www.besiktas.bel.tr/',
-  'https://www.ininal.com/',
-  null,
-  'https://voltmotor.com.tr/',
-  null,
-  'https://www.restyazilim.com/',
-  'https://www.arcelikglobal.com/tr/teknoloji/ar-ge/arcelik-garage/'
-];
+let contents = [], titles = [], images = [], links = [];
 
 
 class Sponsors extends Component {
   constructor(){
     super();
+
+    for(let i = 0; i < s.length; ++i){
+      contents.push(s[i].t);
+      titles.push(s[i].p);
+      links.push(s[i].l);
+      images.push(s[i].im);
+    }
+
     this.divs = [];
     for(let i = 0; i < 10; ++i){
 
@@ -131,7 +94,10 @@ class Sponsors extends Component {
             <div style={pStyle}>
               <h1 style={{textAlign: 'left', fontWeight: '600'}}>{titles[i]}</h1>
               <p style={{marginTop: '10px', color: '#d9d9d9'}}>{contents[i]}</p>
-              <a href={links[i]} class='gotowebsite' style={{float: 'left'}}>Siteye git</a>
+              {links[i] != '' ?
+                <a href={links[i]} class='gotowebsite' style={{float: 'left', marginBottom: '30px'}}>Siteye git</a>
+                : <div></div>
+              }
             </div>
             <div style={{width: '500px', float: 'right'}}><img src={require('../images/' + images[i])} style={imgStyle} alt='' /></div>
           </div>
@@ -142,8 +108,11 @@ class Sponsors extends Component {
             <div style={{width: '500px', float: 'left'}}><img src={require('../images/' + images[i])} style={imgStyle} alt='' /></div>
             <div style={pStyle}>
               <h1 style={{textAlign: 'right', fontWeight: '600'}}>{titles[i]}</h1>
-              <p style={{marginTop: '10px', textAlign: 'right', color:'#d9d9d9'}}>{contents[i]}</p>
-              <a href={links[i]} class='gotowebsite' style={{float: 'right'}}>Siteye git</a>
+              <p style={{marginTop: '10px', color:'#d9d9d9'}}>{contents[i]}</p>
+              {links[i] != '' ?
+                <a href={links[i]} class='gotowebsite' style={{float: 'right', marginBottom: '30px'}}>Siteye git</a>
+                : <div></div>
+              }
             </div>
           </div>
         ); 
