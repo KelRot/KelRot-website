@@ -1,5 +1,5 @@
 const bizkimiz = {
-    t: '“Karanlığı Ezenlerin Lisesi” 1908 yılında kurulmuş Türkiye’nin en köklü, akademik ve sosyal alanlarda başarısıyla önde gelen okullarından biridir. Bu başarısının arkasında her şeyi planlayan disiplinli idarecileri, işiniz özveri ile yapan öğretmen kadrosu ve okulda her alanda faaliyetler yürütüp okuduğu okulun hakkını veren seçkin öğrenciler yer almaktadır.',
+    t: 'Biz Kabataş Erkek Lisesi öğrencileriyiz. Takımımız KelRot 2013 yılında kurulmuş olup, 2014’ den bu yana FRC (First Robotics Competition) yarışmasına katılmaktayız. Her sene yenilenmiş bir takımla Robotik alanında faaliyetler yapıyoruz.',
     l: ''
 };
 
@@ -9,7 +9,7 @@ const kabatas = {
 };
 
 const frc = {
-    t: 'Her sene 15-18 yaş grubu lise öğrencileri için düzenlenen uluslararası bir robot turnuvasıdır. Takımlar, her yıl Ocak ayı başında açıklanan bir tema çerçevesinde belirlenen görevlerin üstesinden gelebilen robotlar yapmaya çalışırlar. \n\n Program öğrencilere, gerçek mühendislik deneyimini yaşatmayı hedeflerken öğretmenler, aileler, mühendisler ile birlikte ortak çalışma platformu sağlar.',
+    t: 'Her sene 15-18 yaş grubu lise öğrencileri için düzenlenen uluslararası bir robot turnuvasıdır. Takımlar, her yıl Ocak ayı başında açıklanan bir tema çerçevesinde belirlenen görevlerin üstesinden gelebilen robotlar yapmaya çalışırlar. Programın amacı öğrencilere, gerçek mühendislik deneyimini yaşatmaktır.',
     l: "https://www.firstinspires.org/"
 };
 
