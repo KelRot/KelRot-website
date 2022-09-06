@@ -7,21 +7,21 @@ const besiktas = {
 
 const iskader = {
     p: 'İskader(İstanbul Kabataş Erkek Liseliler Derneği)',
-    t: 'Kabataş Erkek Lisesinin değerlerini yaşatmak ve mezunları arasındaki dayanışmayı, iletişimi güçlendirmek amacıyla kurulan İSKADER, aynı zamanda genç Kabataş’lıların her konuda yanında olmayı amaçlamaktadır. Her alanda başarıyı yakalayan, bulundukları her ortamda fark yaratan, yeniliklere öncü olan yeni Kabataş mezunlarını yetiştirmek için faaliyet gösteren okulumuz derneği İSKADER bize hem yeni atölyemizin açılmasında hem de sezon boyunca verdikleri sayısız desteklerle takımımızın Ana Sponsorluğunu yapmıştır. Bu yolda bize destek gösteren Sayın Haldun Haznedar ve Sayın Vakıf Başkanımız Mustafa Kemal başta olmak üzere tüm İSKADER ailesine teşekkür ederiz!',
+    t: 'Kabataş Erkek Lisesinin değerlerini yaşatmak ve mezunları arasındaki dayanışmayı, iletişimi güçlendirmek amacıyla kurulan İSKADER, aynı zamanda genç Kabataş’lıların her konuda yanında olmayı amaçlamaktadır. Her alanda başarıyı yakalayan, bulundukları her ortamda fark yaratan, yeniliklere öncüolan yeni Kabataş mezunlarını yetiştirmek için faaliyet gösteren okulumuz derneği İSKADER bize hem yeni atölyemizin açılmasında hem de sezon boyunca verdikleri sayısız desteklerle takımımızın "Ana Sponsorluğunu" yapmıştır. Bu yolda bize destek olan Sayın Vakıf Başkanımız Mustafa Kemal Bey başta olmak üzere tüm İSKADER ailesine',
     l: 'https://iskader.org.tr/',
     im: 'iskader.png'
 };
 
 const kelev = {
     p: 'KELEV',
-    t: 'Kabataş Erkek Lisesi Eğitim Vakfı çağdaş eğitim ve öğretimin devamına destek olmak isteyenlerle birlikte, Atatürk ilke ve devrimlerine bağlı, cumhuriyetimizi ve demokratik değerlerimizi koruyacak nesillerin yetişmesine katkıda bulunacak iklimi yaratmak ve yaşatılmasına katkı sağlamak yönünde olan sayısız faaliyetlerini 2021-2022 yılında hem maddi hem manevi anlamda bize destek olarak sürdürmeye devam etmiştir. Bu yolda bize destek veren Sayın KELEV Yönetim Kurulu Başkanımız Ahmet Çağlar başta olmak üzere tüm KELEV ailesine teşekkür ederiz!',
+    t: 'Kabataş Erkek Lisesi Eğitim Vakfı çağdaş eğitim ve öğretimin devamına destek olmak isteyenlerle birlikte, Atatürk ilke ve devrimlerine bağlı,  cumhuriyetimizi ve demokratik değerlerimizi koruyacak nesillerin yetişmesine katkıda bulunacak iklimi yaratmak ve yaşatılmasına katkı sağlamak yönünde olan sayısız faaliyetlerini 2021-2022 yılında takımımıza hem maddi hem de manevi anlamda bize destek olarak sürdürmeye devam etmiştir. Bu yolda bize destek olan Sayın KELEV Yönetim Kurulu Başkanımız Ahmet Çağlar başta olmak üzere tüm KELEV ailesine teşekkür ederiz! ',
     l: 'https://www.kelev.org.tr/',
     im: 'kelev.png'
 };
 
 const ininal = {
     p: 'İninal',
-    t: '2012 yılında kurulan, 10 yıldan kısa bir sürede neredeyse her gencin kullandığı bir ödeme platformu olan ininal, hedef kitlesi olan gençlere daha fazla destek olabilmek için 2021-2022 sezonunda takımımızın altın sponsorluğunu yaptı. Bu yolda bize yol gösterici olan anası',
+    t: '2012 yılında kurulan, 10 yıldan kısa bir sürede neredeyse her gencin kullandığı bir ödeme platformu olan ininal, hedef kitlesi olan gençlere daha fazla destek olabilmek için 2021-2022 sezonunda takımımızın altın sponsorluğunu yaptı. Bu yolda bize destek olan tüm İninal ailesine teşekkür ederiz.',
     l: 'https://www.ininal.com/',
     im: 'ininal.png'
 };
