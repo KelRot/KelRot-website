@@ -14,6 +14,7 @@ import FRC from './components/FRC';
 import Teknofest from './components/Teknofest';
 import Members from './components/Members';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import VisionMission from './components/Vision-Mission';
 
 function App() {
   return (
@@ -35,14 +36,14 @@ function App() {
             <Route exact path='/about' exact element={
               <About />
             } />
-            <Route exact path='/about/members' exact element={
+            <Route exact path='/members' exact element={
               <Members />
+            } />
+            <Route exact path='/vision-mission' exact element={
+              <VisionMission />
             } />
             <Route exact path='/media' exact element={
               <Media />
-            } />
-            <Route exact path='/members' exact element={
-              <Members />
             } />
             <Route exact path='/sponsors' exact element={
               <Sponsors />
