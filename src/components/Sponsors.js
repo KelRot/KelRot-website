@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import s from '../text/sponsors';
+import * as sty from '../Styles';
 
-const boxStyle = {
-  width: '1000px',
-  backgroundColor: '#323232',
-  margin: '40px',
-  borderRadius: '20px',
-  overflow: 'auto'
-};
 
 let imgStyle;
 
@@ -36,15 +30,6 @@ let Service = {
   filter: 'drop-shadow(0px 0px 15px #5127a1)'
 }
 
-const pStyle = {
-  width: '440px',
-  color: '#ffffff',
-  overflow: 'hidden',
-  margin: '30px 0 0 30px',
-  float: 'left',
-  fontSize: '18px',
-  textAlign: 'justify'
-};
 
 /* 
 Beşiktaş Belediyesi - Platin 
@@ -90,25 +75,37 @@ class Sponsors extends Component {
 
       if(i % 2 === 0){
         this.divs.push(
-          <div style={boxStyle} key={i}>
-            <div style={pStyle}>
+          <div style={sty.boxStyle} key={i}>
+          
+            <div style={{...sty.pStyle, ...{width: '440px'}}}>
+            
               <h1 style={{textAlign: 'left', fontWeight: '600'}}>{titles[i]}</h1>
-              <p style={{marginTop: '10px', color: '#d9d9d9'}}>{contents[i]}</p>
+          
+              <p style={{marginTop: '10px', color: sty.palette.pcolor}}>{contents[i]}</p>
+            
               {links[i] != '' ?
                 <a href={links[i]} class='gotowebsite' style={{float: 'left', marginBottom: '30px'}}>Siteye git</a>
                 : <div></div>
+            
               }
             </div>
+          
             <div style={{width: '500px', float: 'right'}}><img src={require('../images/' + images[i])} style={imgStyle} alt='' /></div>
+         
           </div>
         );
       } else{
         this.divs.push(
-          <div style={boxStyle} key={i}>
+          <div style={sty.boxStyle} key={i}>
+
             <div style={{width: '500px', float: 'left'}}><img src={require('../images/' + images[i])} style={imgStyle} alt='' /></div>
-            <div style={pStyle}>
+
+            <div style={{...sty.pStyle, ...{width: '440px'}}}>
+
               <h1 style={{textAlign: 'right', fontWeight: '600'}}>{titles[i]}</h1>
-              <p style={{marginTop: '10px', color:'#d9d9d9'}}>{contents[i]}</p>
+              
+              <p style={{marginTop: '10px', color: sty.palette.pcolor}}>{contents[i]}</p>
+
               {links[i] != '' ?
                 <a href={links[i]} class='gotowebsite' style={{float: 'right', marginBottom: '30px'}}>Siteye git</a>
                 : <div></div>

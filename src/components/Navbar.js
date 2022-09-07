@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import * as sty from '../Styles';
 
 class Navbar extends Component {
   render() {
     return (
-      <div className='navbar'>
+      <div className='navbar' style={{backgroundColor: sty.palette.navbar}}>
         <ul>
             <a href='/'>Ana Sayfa</a>
             <a href='/about'>Hakkımızda</a>

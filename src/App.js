@@ -15,58 +15,63 @@ import Teknofest from './components/Teknofest';
 import Members from './components/Members';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import VisionMission from './components/Vision-Mission';
+import * as sty from './Styles';
+
+
 
 function App() {
   return (
-    <Router>
-      <Intro />
-      <Navbar />
-      <div style={{
-        background: 'rgba(33, 33, 33, 0.8)',
-        width: '1080px',
-        marginTop: '0'
-      }} class='Main'>
-        <Routes>
-            <Route exact path='/' exact element={
-              <div>
-                <Slider />
-                <Info />
-              </div>
-            } />
-            <Route exact path='/about' exact element={
-              <About />
-            } />
-            <Route exact path='/members' exact element={
-              <Members />
-            } />
-            <Route exact path='/vision-mission' exact element={
-              <VisionMission />
-            } />
-            <Route exact path='/media' exact element={
-              <Media />
-            } />
-            <Route exact path='/sponsors' exact element={
-              <Sponsors />
-            } />
-            <Route exact path='/frc' exact element={
-              <FRC />
-            } />
-            <Route exact path='/teknofest' exact element={
-              <Teknofest />
-            } />
-            <Route exact path='/docs' exact element={
-              <Docs />
-            } />
-            <Route path='/blog/:blogname' element={
-              <Blog />
-            } />
-            <Route exact path='/writeblog' exact element={
-              <WriteBlog />
-            } />
-        </Routes>
-      </div>
-      <Footer />
-    </Router>
+    <div style={{backgroundImage: sty.palette.background}}>
+      <Router>
+        <Intro />
+        <Navbar />
+        <div style={{
+          background: sty.palette.mainback,
+          width: '1080px',
+          marginTop: '0'
+        }} class='Main'>
+          <Routes>
+              <Route exact path='/' exact element={
+                <div>
+                  <Slider />
+                  <Info />
+                </div>
+              } />
+              <Route exact path='/about' exact element={
+                <About />
+              } />
+              <Route exact path='/members' exact element={
+                <Members />
+              } />
+              <Route exact path='/vision-mission' exact element={
+                <VisionMission />
+              } />
+              <Route exact path='/media' exact element={
+                <Media />
+              } />
+              <Route exact path='/sponsors' exact element={
+                <Sponsors />
+              } />
+              <Route exact path='/frc' exact element={
+                <FRC />
+              } />
+              <Route exact path='/teknofest' exact element={
+                <Teknofest />
+              } />
+              <Route exact path='/docs' exact element={
+                <Docs />
+              } />
+              <Route path='/blog/:blogname' element={
+                <Blog />
+              } />
+              <Route exact path='/writeblog' exact element={
+                <WriteBlog />
+              } />
+          </Routes>
+        </div>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 

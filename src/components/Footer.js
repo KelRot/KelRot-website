@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
+import * as sty from '../Styles';
+
 
 class Footer extends Component {
   render() {
     return (
-      <div className='footer'>
+      <div className='footer' style={{background: sty.palette.dark}}>
 
         <ul className='info'>
           <li id='info'>İletişim</li>
