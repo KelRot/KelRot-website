@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import HTMLReactParser from 'html-react-parser';
 import { useParams } from 'react-router-dom';
 import Axios from 'axios';
+import * as sty from '../Styles';
 
 function withParams(Component) {
   return props => <Component {...props} params={useParams()} />;
@@ -15,9 +16,13 @@ class Blog extends Component{
   constructor(props){
     super(props);
     this.state = {
-      text: ""
+      c: '',
+      date: '',
+      author: ''
     }
+    
   }
+
 
   componentDidMount(){
     let {blogname} = this.props.params;
@@ -27,19 +32,42 @@ class Blog extends Component{
       pageName: blogname    
     }).then(response => {
       if(response.data.result){
-        this.setState({text: response.data.message});
+        this.setState({c: parse(response.data.page)});
+
+        let date = new Date(parseInt(response.data.date)).toLocaleString('en-GB').split(',')[0];
+        this.setState({date: 
+          <div style={{...sty.boxStyle, ...{width: '275px', float: 'right', display: 'flex', justifyContent: 'center', marginTop: '0'}}}>
+            <i><p style={{...sty.pStyle, ...{margin: '25px 0 0 0'}}}>Tarih :  {date}</p></i>
+          </div>
+        });
+
+        this.setState({author: 
+          <div style={{...sty.boxStyle, ...{width: '275px', float: 'right', display: 'flex', justifyContent: 'center', marginTop: '0'}}}>
+            <i><p style={{...sty.pStyle, ...{margin: '25px 0 0 0'}}}>Yazar :  {response.data.author}</p></i>
+          </div>
+        });
       }
     });
-  }
 
+    this.interval = setTimeout(() => {
+      this.setState({ time: Date.now() });
+
+      document.querySelectorAll('.box').forEach(item => (Object.keys(sty.boxStyle).forEach(key => item.style[key] = sty.boxStyle[key])));
+      document.querySelectorAll('.h1').forEach(item => (Object.keys(sty.h1Style).forEach(key => item.style[key] = sty.h1Style[key])));
+      document.querySelectorAll('.h2').forEach(item => (Object.keys(sty.h2Style).forEach(key => item.style[key] = sty.h2Style[key])));
+      document.querySelectorAll('.p').forEach(item => (Object.keys(sty.pStyle).forEach(key => item.style[key] = sty.pStyle[key])));
+      document.querySelectorAll('.img').forEach(item => (Object.keys(sty.imgStyle).forEach(key => item.style[key] = sty.imgStyle[key])));
+
+    }, 100);
+  }
+    
 
   render() {
     return (
-      <div style={{
-        height: '100px'
-      }}>
-
-        <p>{parse(this.state.text)}</p>
+      <div style={{overflow: 'auto'}}>
+        {this.state.c}
+        {this.state.author}
+        {this.state.date}
       </div>
     )
   }
