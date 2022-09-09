@@ -9,6 +9,7 @@ import Media from './components/Media';
 import Sponsors from './components/Sponsors';
 import Docs from './components/Docs';
 import Blog from './components/Blog';
+import Blogs from './components/Blogs';
 import WriteBlog from './components/WriteBlog';
 import FRC from './components/FRC';
 import Teknofest from './components/Teknofest';
@@ -21,7 +22,10 @@ import * as sty from './Styles';
 
 function App() {
   return (
-    <div style={{backgroundImage: sty.palette.background}}>
+    <div style={{
+      backgroundImage: sty.palette.background,
+      paddingBottom: '30px'
+    }}>
       <Router>
         <Intro />
         <Navbar />
@@ -60,6 +64,9 @@ function App() {
               } />
               <Route exact path='/docs' exact element={
                 <Docs />
+              } />
+              <Route path='/blog' element={
+                <Blogs />
               } />
               <Route path='/blog/:blogname' element={
                 <Blog />

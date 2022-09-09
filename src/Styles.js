@@ -88,3 +88,7 @@ export const personBoxStyle = {
     float: 'left',
     backgroundColor: palette.background
 };
+
+export const imgStyle = {
+
+};

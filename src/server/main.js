@@ -47,11 +47,10 @@ app.post("/", (req, res) => {
         }
         console.log(results);
 
-        res.send({result: true, message: results[0]['pageString']});
+        res.send({result: true, page: results[0]['pageString'], date: results[0]['date'], author: results[0]['author']});
        
     });
 
-    console.log(page);
     //res.send("Seems fine to me lol " + req.body.pageName);
     
 });
@@ -66,6 +65,8 @@ app.post("/changePage", (req, res) => {
 
     let page = connection.escape(req.body.page);
     let pageString = connection.escape(req.body.pageString);
+    let date = connection.escape(req.body.date);
+    let author = connection.escape(req.body.author);
 
 
 
@@ -81,10 +82,10 @@ app.post("/changePage", (req, res) => {
         console.log(results);
 
         if(results.length < 1){
-            sql = 'INSERT INTO blogTable (pageName, pageString) VALUES (' + page + ', ' + pageString + ')';
+            sql = 'INSERT INTO blogTable (pageName, pageString, date, author) VALUES (' + page + ', ' + pageString + ', ' + date + ', ' + author + ')';
         }
         else{
-            sql = 'UPDATE blogTable SET pageString=' + pageString + ' WHERE blogTable.pageName=' + page;
+            sql = 'UPDATE blogTable SET pageString=' + pageString + ', ' + 'date=' + date + ', ' + 'author=' + author + ' WHERE blogTable.pageName=' + page;
         }
 
         connection.query(sql, function (error, results, fields) {
