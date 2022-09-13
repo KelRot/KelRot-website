@@ -1,102 +1,30 @@
 import React, { Component } from 'react';
 import * as sty from '../Styles';
+import s from '../text/docs';
 
+const linkStyle = {
+  color: '#d9d9d9'
+};
 
-const titles = [
-  '2021-2022',
-  '2020-2021',
-  '2019-2020',
-  '2018-2019',
-  '2016-2017'
-];
-
-const contents = [
-  [
-    'Off Season Kod', 
-    'Regional Kod', 
-    'Sabancı Yarışması Kod',
-    'Off Season CAD',
-    'Regional CAD',
-    'Sabancı Yarışması CAD'
-  ],
-  [
-    'Off Season Kod', 
-    'Regional Kod', 
-    'Off Season CAD',
-    'Regional CAD'
-  ],
-  [
-    'Off Season Kod', 
-    'Regional Kod', 
-    'Off Season CAD',
-    'Regional CAD'
-  ],
-  [
-    'Off Season Kod', 
-    'Regional Kod',
-    'Off Season CAD', 
-    'Regional CAD'
-  ],
-  [
-    'Off Season Kod', 
-    'Regional Kod', 
-    'Off Season CAD',
-    'Regional CAD'
-  ]
-];
-
-
-
-const links = [
-  [
-    '',
-    '',
-    '',
-    '',
-    ''
-  ],
-  [
-    '',
-    '',
-    '',
-    '',
-    ''
-  ],
-  [
-    '',
-    '',
-    '',
-    '',
-    ''
-  ],
-  [
-    '',
-    '',
-    '',
-    '',
-    ''
-  ],
-  [
-    '',
-    '',
-    '',
-    '',
-    ''
-  ]
-];
-
-
+const titles = [], contents = [], links = [];
 
 class Docs extends Component {
   constructor(){
     super();
+
+    for(let i = 0; i < s.length; ++i){
+      titles.push(s[i].t);
+      contents.push(s[i].c);
+      links.push(s[i].l);
+    }
+
     this.divs = [];
-    for(let i=0; i<5; ++i){
+    for(let i = 0; i < s.length; ++i){
       let a = [];
-      for(let j=0; j<contents[i].length; ++j){
+      for(let j = 0; j < contents[i].length; ++j){
         a.push(
           <div style={sty.miniBoxStyle}>
-            <a href={links[i][j]} style={{color: sty.palette.acolor}}>
+            <a href={links[i][j]} style={linkStyle}>
               {contents[i][j]}
             </a>
           </div>
@@ -104,11 +32,9 @@ class Docs extends Component {
       }
       this.divs.push(
         <div style={sty.boxStyle} key={i}>
-          <div style={{width: '600px', height: '300px', margin: '0'}}>
-            <h1 style={{fontWeight: '600', overflow: 'hidden', margin: '30px 0 0 30px', float: 'left'}}>
-              {titles[i]}
-            </h1>
-            <div style={{width: (contents[i].length * 150 - 30 + 'px'), float: 'left', position: 'relative', top: '10px'}}>
+          <div style={sty.aStyle}>
+            <h1 style={{...sty.h1Style, ...{width: '1000px'}}}>{titles[i]}</h1>
+            <div style={{width: (contents[i].length * 150 - 30 + 'px'), float: 'left', position: 'relative', top: '10px', marginBottom: '40px'}}>
               {a}
             </div>
           </div>

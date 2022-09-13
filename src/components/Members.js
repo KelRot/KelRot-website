@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import * as sty from '../Styles';
 
-
 const people = [
     {
         img: '',
@@ -105,17 +104,16 @@ const people = [
     }
 ];
 
-
 class Members extends Component {
   constructor(){
     super();
     this.divs = [];
 
-
     this.divs.push(
         <div style={{...sty.boxStyle, ...{height: '70px'}}}>
-            <h1><a href='/about' style={sty.aStyle}>Takım</a></h1>
-            <h1><a href='/members' style={sty.aStyle}>Üyeler</a></h1>
+            <h1><a href='/about' style={{...sty.aStyle, ...{marginLeft: '30px', width: '80px'}}}>Takım</a></h1>
+            <h1><a href='/members' style={{...sty.aStyle, ...{marginLeft: '30px', width: '80px'}}}>Üyeler</a></h1>
+            <h1><a href='/vision-mission' style={{...sty.aStyle, ...{marginLeft: '30px', width: '200px'}}}>Vizyon-Misyon</a></h1>
         </div>
     );
 
@@ -135,7 +133,9 @@ class Members extends Component {
 
     this.divs.push(
         <div style={{...sty.boxStyle, ...{height: '830px'}}}>
-            <div style={{width: '1000px', height: '80px'}}><h1 style={sty.h1Style}>Takım</h1></div>
+            <div style={sty.aStyle}>
+                <h1 style={sty.h1Style}>Takım</h1>
+            </div>
             {this.personBoxes}
         </div>
     );
@@ -156,7 +156,9 @@ class Members extends Component {
 
     this.divs.push(
         <div style={{...sty.boxStyle, ...{height: '300px'}}}>
-            <div style={{width: '1000px', height: '80px'}}><h1 style={sty.h1Style}>Mentörler</h1></div>
+            <div style={sty.aStyle}>
+                <h1 style={sty.h1Style}>Mentörler</h1>
+            </div>
             {this.personBoxes}
         </div>
     );

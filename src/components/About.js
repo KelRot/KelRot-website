@@ -2,37 +2,41 @@ import React, { Component } from 'react';
 import s from '../text/about';
 import * as sty from '../Styles';
 
-
 class About extends Component {
 
   constructor(){
     super();
-    
     this.divs = [];
 
     this.divs.push(
-      <div style={{...sty.boxStyle, ...{height: '70px'}}} key={1}>
-        <h1><a href='/about' style={sty.aStyle}>Takım</a></h1>
-        <h1><a href='/members' style={sty.aStyle}>Üyeler</a></h1>
+      <div style={{...sty.boxStyle, ...{height: '70px'}}}>
+          <h1><a href='/about' style={{...sty.aStyle, ...{marginLeft: '30px', width: '80px'}}}>Takım</a></h1>
+          <h1><a href='/members' style={{...sty.aStyle, ...{marginLeft: '30px', width: '80px'}}}>Üyeler</a></h1>
+          <h1><a href='/vision-mission' style={{...sty.aStyle, ...{marginLeft: '30px', width: '200px'}}}>Vizyon-Misyon</a></h1>
       </div>
     );
-
-    this.s = "\n";
-    this.ps = [<p style={sty.pStyle} key={3}>{this.s}</p>];
 
     for(let i = 0; i < s.content.length; ++i){
-      this.ps.push(
-        <p style={sty.pStyle} key={i + 100}>{s.content[i]}</p> 
-      );
+      if(s.images[i] === null){
+        this.divs.push(
+          <div style={sty.boxStyle} key={i}>
+            <div style={sty.aStyle}>
+              <p style={sty.pStyle}>{s.content[i]}</p>
+            </div>
+          </div>
+        )
+      } else{
+        this.divs.push(
+          <div style={sty.boxStyle} key={i}>
+            <div style={{...sty.aStyle, ...{width: '440px'}}}>
+              <p style={sty.pStyle}>{s.content[i]}</p>
+            </div>
+            <img src={require('../images/' + s.images[i])} style={sty.imgStyle} alt=''></img>
+          </div>
+        )
+      }
     }
 
-    this.divs.push(
-      <div style={sty.boxStyle} key={2}>
-        <h1 style={sty.aStyle}>Tarihçe</h1>
-        {this.ps}
-      </div>
-    );
-      
   }
 
   render() {

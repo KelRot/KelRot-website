@@ -1,41 +1,6 @@
 import React, { Component } from 'react'
 import s from '../text/vision-mission';
-
-let boxStyle = {
-    width: '1000px',
-    backgroundColor: '#323232',
-    margin: '40px',
-    borderRadius: '20px',
-    overflow: 'auto',
-    color: '#d9d9d9'
-};
-
-const h1Style = {
-    color: '#d9d9d9',
-    marginLeft: '5px',
-    marginBottom: '15px',
-    float: 'left',
-    fontWeight: '600',
-    fontSize: '32px'
-};
-
-const aStyle = {
-    fontWeight: '400',
-    color: '#d9d9d9',
-    margin: '18px 0 0 25px',
-    float: 'left',
-    fontSize: '25px'
-}
-
-const pStyle = {
-    color: '#d9d9d9',
-    overflow: 'auto',
-    margin: '0 8px 0 5px',
-    float: 'left',
-    fontSize: '18px',
-    paddingBottom: '30px'
-}
-
+import * as sty from '../Styles';
 
 class VisionMission extends Component {
   constructor(){
@@ -43,22 +8,22 @@ class VisionMission extends Component {
     this.divs = [];
 
     this.divs.push(
-        <div style={{...boxStyle, ...{height: '70px'}}}>
-            <h1><a href='/about' style={{...aStyle, ...{marginLeft: '30px'}}}>Takım</a></h1>
-            <h1><a href='/members' style={{...aStyle, ...{marginLeft: '30px'}}}>Üyeler</a></h1>
-            <h1><a href='/vision-mission' style={{...aStyle, ...{marginLeft: '30px'}}}>Vizyon-Misyon</a></h1>
-        </div>
+      <div style={{...sty.boxStyle, ...{height: '70px'}}}>
+          <h1><a href='/about' style={{...sty.aStyle, ...{marginLeft: '30px', width: '80px'}}}>Takım</a></h1>
+          <h1><a href='/members' style={{...sty.aStyle, ...{marginLeft: '30px', width: '80px'}}}>Üyeler</a></h1>
+          <h1><a href='/vision-mission' style={{...sty.aStyle, ...{marginLeft: '30px', width: '200px'}}}>Vizyon-Misyon</a></h1>
+      </div>
     );
 
     for(let i = 0; i < s.length; ++i){
-        this.divs.push(
-            <div style={boxStyle}>
-                <div style={aStyle}>
-                    <h1 style={h1Style}>{s[i].h}</h1>
-                    <p style={pStyle}>{s[i].t}</p>
-                </div>
+      this.divs.push(
+        <div style={sty.boxStyle}>
+            <div style={sty.aStyle}>
+                <h1 style={sty.h1Style}>{s[i].h}</h1>
+                <p style={sty.pStyle}>{s[i].t}</p>
             </div>
-        );
+          </div>
+      );
     }
 
   }
