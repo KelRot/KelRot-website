@@ -26,7 +26,7 @@ class Blog extends Component{
 
   componentDidMount(){
     let {blogname} = this.props.params;
-    this.setState({text: blogname});
+    this.setState({text: blogname}); 
     Axios.post('http://localhost:3001/',
     {
       pageName: blogname    
@@ -53,9 +53,9 @@ class Blog extends Component{
       this.setState({ time: Date.now() });
 
       document.querySelectorAll('.box').forEach(item => (Object.keys(sty.boxStyle).forEach(key => item.style[key] = sty.boxStyle[key])));
-      document.querySelectorAll('.h1').forEach(item => (Object.keys(sty.h1Style).forEach(key => item.style[key] = sty.h1Style[key])));
+      document.querySelectorAll('.h1').forEach(item => (Object.keys(sty.h1BlogStyle).forEach(key => item.style[key] = sty.h1BlogStyle[key])));
       document.querySelectorAll('.h2').forEach(item => (Object.keys(sty.h2Style).forEach(key => item.style[key] = sty.h2Style[key])));
-      document.querySelectorAll('.p').forEach(item => (Object.keys(sty.pStyle).forEach(key => item.style[key] = sty.pStyle[key])));
+      document.querySelectorAll('.p').forEach(item => (Object.keys(sty.pBlogStyle).forEach(key => item.style[key] = sty.pBlogStyle[key])));
       document.querySelectorAll('.img').forEach(item => (Object.keys(sty.imgStyle).forEach(key => item.style[key] = sty.imgStyle[key])));
 
     }, 100);

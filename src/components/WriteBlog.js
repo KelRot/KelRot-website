@@ -24,7 +24,8 @@ class WriteBlog extends Component{
       page: '',
       status: 'Not submitted yet',
       c: '',
-      author: ''
+      author: '',
+      title: ''
     }
     this.submit = () => {
       let pageString = this.state.text;
@@ -32,13 +33,15 @@ class WriteBlog extends Component{
       let page = this.state.page;
       let date = Date.now();
       let author = this.state.author;
+      let title = this.state.title;
       Axios.post('http://localhost:3001/changePage',
       {
         page: page,
         pass: writerPass,
         pageString: pageString,
         date: date,
-        author: author
+        author: author,
+        title: title
       }).then(response => {
 
         let data = response.data;
@@ -61,9 +64,9 @@ class WriteBlog extends Component{
       this.setState({c: parse(this.state.text)});
 
       document.querySelectorAll('.box').forEach(item => (Object.keys(sty.boxStyle).forEach(key => item.style[key] = sty.boxStyle[key])));
-      document.querySelectorAll('.h1').forEach(item => (Object.keys(sty.h1Style).forEach(key => item.style[key] = sty.h1Style[key])));
+      document.querySelectorAll('.h1').forEach(item => (Object.keys(sty.h1BlogStyle).forEach(key => item.style[key] = sty.h1BlogStyle[key])));
       document.querySelectorAll('.h2').forEach(item => (Object.keys(sty.h2Style).forEach(key => item.style[key] = sty.h2Style[key])));
-      document.querySelectorAll('.p').forEach(item => (Object.keys(sty.pStyle).forEach(key => item.style[key] = sty.pStyle[key])));
+      document.querySelectorAll('.p').forEach(item => (Object.keys(sty.pBlogStyle).forEach(key => item.style[key] = sty.pBlogStyle[key])));
       document.querySelectorAll('.img').forEach(item => (Object.keys(sty.imgStyle).forEach(key => item.style[key] = sty.imgStyle[key])));
     }, 200);
   }
@@ -78,6 +81,7 @@ class WriteBlog extends Component{
         <input type="text" onChange={e => this.setState({pass: e.target.value})} placeholder="password" class='writeBlogInput'></input>
         <input type="text" onChange={e => this.setState({page: e.target.value})} placeholder="page" class='writeBlogInput'></input>
         <input type="text" onChange={e => this.setState({author: e.target.value})} placeholder="author" class='writeBlogInput'></input>
+        <input type="text" onChange={e => this.setState({title: e.target.value})} placeholder="pagetitle" class='writeBlogInput'></input>
         <button class='writeBlogButton' onClick={this.submit}>Yayınla</button>
         <button class='writeBlogButton'>{this.state.status}</button>
         <div style={st}>  
