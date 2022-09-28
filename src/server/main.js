@@ -67,6 +67,7 @@ app.post("/changePage", (req, res) => {
     let pageString = connection.escape(req.body.pageString);
     let date = connection.escape(req.body.date);
     let author = connection.escape(req.body.author);
+    let title = connection.escape(req.body.title);
 
 
 
@@ -82,10 +83,10 @@ app.post("/changePage", (req, res) => {
         console.log(results);
 
         if(results.length < 1){
-            sql = 'INSERT INTO blogTable (pageName, pageString, date, author) VALUES (' + page + ', ' + pageString + ', ' + date + ', ' + author + ')';
+            sql = 'INSERT INTO blogTable (pageName, pageString, date, author, pageTitle) VALUES (' + page + ', ' + pageString + ', ' + date + ', ' + author + ',' + title + ')';
         }
         else{
-            sql = 'UPDATE blogTable SET pageString=' + pageString + ', ' + 'date=' + date + ', ' + 'author=' + author + ' WHERE blogTable.pageName=' + page;
+            sql = 'UPDATE blogTable SET pageString=' + pageString + ', ' + 'date=' + date + ', ' + 'author=' + author + ', ' + 'pageTitle=' + title + ' WHERE blogTable.pageName=' + page;
         }
 
         connection.query(sql, function (error, results, fields) {
@@ -98,6 +99,17 @@ app.post("/changePage", (req, res) => {
     
 });
 
+app.post("/getLatest", (req, res) => {
+    var sql = 'SELECT * FROM blogTable';
+
+    connection.query(sql, function (error, results, fields) {
+        if (error)
+            throw error;
+        
+        res.send({result: true, data: results});
+    });
+
+});
 
 app.listen(3001, () => {
     console.log("Running on port 3001...");
