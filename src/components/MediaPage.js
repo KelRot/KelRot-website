@@ -23,13 +23,42 @@ class MediaPage extends Component {
     })
       .then(response => {
         if(response.data.result){
-          let d = response.data.data, temp = [];
+          let d = response.data.data, temp = [], widths = [];
           for(let i = 0; i < d.length; ++i){
-            temp.push(
-              <div style={boxStyle}>
-                <img src={d[i].link} />
-              </div>
-            );
+            const newImage = new Image();
+            newImage.src = d[i].l;
+            widths.push(newImage.width * 150 / newImage.height);
+          }
+          let cur = 20, c = 0;
+          for(let i = 0; i <= d.length; ++i){
+            if(i == d.length || cur + widths[i] + 20 > 1080){
+              for(let j = 1; j <= c; ++j){
+                if(j > 1){
+                  temp.push(
+                    <div style={{...sty.boxStyle, ...{maxWidth: widths[i - j], float: 'left', marginLeft: (1060-cur)/(c-1) + 'px', marginRight: 0}}} class='img' key={j*37+i*36+10000}>
+                      <img src={d[i - j].l} style={{
+                        maxHeight: '150px',
+                      }} key={i*36+j*37}/>
+                    </div>
+                  );
+                }else{
+                  temp.push(
+                    <div style={{...sty.boxStyle, ...{maxWidth: widths[i - j], float: 'left', marginLeft: '20px', marginRight: 0}}} class='img' key={j*37+i*36+10000}>
+                      <img src={d[i - j].l} style={{
+                        maxHeight: '150px',
+                      }} key={i*36+j*37}/>
+                    </div>
+                  );
+                }
+              }
+              if(i < d.length)
+                cur = widths[i] + 20;
+              c = 1;
+            }
+            else{
+              c += 1;
+              cur += widths[i];
+            }
           }
           this.setState({divs: temp});
         }  
