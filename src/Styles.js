@@ -1,13 +1,13 @@
 export const palette = {
-    background: 'linear-gradient(#262626, #404040)',
-    navbar: '#404040',
-    mainback: '#212121',
-    boxback: '#323232',
-    lighter: '#404040',
-    pcolor: '#d9d9d9',
-    acolor: '#d9d9d9',
+    background: 'linear-gradient(#171717, #444444)',
+    navbar: '#303030',//404040
+    mainback: '#171717',//212121
+    boxback: '#303030',//323232
+    lighter: '#171717',//404040
+    pcolor: '#EDEDED',//d9d9d9
+    acolor: '#EDEDED',//d9d9d9
     hcolor: '#ffffff',
-    dark: '#323232'
+    dark: '#303030'//323232
 };
 
 export const boxStyle = {
@@ -35,6 +35,15 @@ export const pStyle = {
     paddingBottom: '30px'
 };
 
+export const pBlogStyle = {
+    color: palette.pcolor,
+    margin: '10px 8px 0 0',
+    float: 'left',
+    fontSize: '18px',
+    paddingBottom: '30px',
+    paddingLeft: '20px'
+};
+
 export const h1Style = {
     color: palette.hcolor,
     float: 'left',
@@ -42,6 +51,20 @@ export const h1Style = {
     fontSize: '36px',
     textAlign: 'left'
 };
+
+
+export const h1BlogStyle = {
+    textAlign: 'left',
+    width: '800px',
+    paddingLeft: '20px',
+    paddingTop: '10px',
+    paddingBottom: '10px',
+    color: palette.hcolor,
+    float: 'left',
+    fontWeight: '600',
+    fontSize: '36px'
+};
+
 
 export const miniBoxStyle = {
     width: '200px',
