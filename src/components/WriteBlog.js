@@ -68,11 +68,11 @@ class WriteBlog extends Component{
       document.querySelectorAll('.h2').forEach(item => (Object.keys(sty.h2Style).forEach(key => item.style[key] = sty.h2Style[key])));
       document.querySelectorAll('.p').forEach(item => (Object.keys(sty.pBlogStyle).forEach(key => item.style[key] = sty.pBlogStyle[key])));
       document.querySelectorAll('.img').forEach(item => (Object.keys(sty.imgStyle).forEach(key => item.style[key] = sty.imgStyle[key])));
+      
     }, 200);
   }
 
   
-
 
   render() {
     return (

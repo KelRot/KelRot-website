@@ -21,12 +21,19 @@ class Blogs extends Component{
         d = d.reverse();
         let temp = [];
         for(let i = 0; i < d.length; ++i){
+          let date = new Date(parseInt(d[i].date)).toLocaleString('en-GB').split(',')[0];
           temp.push(
             <div style={sty.boxStyle} key={i}>
               <div style={sty.h1BlogStyle} key={i + 86}>
                 <a href={'http://localhost:3000/blog/' + d[i].pageName}>
                   {d[i].pageTitle}
                 </a>
+              </div>   
+              <div style={{
+                float: 'right',
+                padding: '20px 20px'
+              }}>
+                {date}
               </div>
             </div>
           );

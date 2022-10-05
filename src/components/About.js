@@ -17,7 +17,7 @@ class About extends Component {
     );
 
     for(let i = 0; i < s.content.length; ++i){
-      if(s.images[i] === null){
+      if(s.images[i] === ''){
         this.divs.push(
           <div style={sty.boxStyle} key={i}>
             <div style={sty.aStyle}>
